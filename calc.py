@@ -52,11 +52,11 @@ def calculator():
         if choice == "1":
             result = add(a, b)
         elif choice == "2":
-            result = subtract(a, b)
+            result = sub(a, b)
         elif choice == "3":
-            result = multiply(a, b)
+            result = mult(a, b)
         elif choice == "4":
-            result = divide(a, b)
+            result = div(a, b)
         elif choice == "5":
             result = exp(a, b)
         
