@@ -1,4 +1,4 @@
-#Defining each function(Add, Sub, Mult, Div, Exp, along with input validation)
+#Defining each function(Add, Sub, Mult, Div, Exp, along with input validation).
 
 def add(a, b):
     return a + b
@@ -20,7 +20,8 @@ def calculator():
 
     print('Welcome to the CLI Python Calculator')
 
-    while True:
+#Allows user to choose which previously declared option they would like the calculator to perform.
+    while True: 
         print ('Choose an operation')
         print('1) Addition')
         print('2) Subtraction')
@@ -31,20 +32,23 @@ def calculator():
 
         choice = input('Enter operation number: ')
 
+        #Lets user exit.
         if choice == '6':
             print('Goodbye, thanks for using the CLI Python Calculator!')
             break
+        #Handles error in user input, loops again.
         if choice not in ["1", "2", "3", "4", "5"]:
             print("Invalid choice. Please select 1-6.")
             continue
-
+        #Accepts user's numbers and puts them in variables.
         try:
             a = float(input("Enter first number: "))
             b = float(input("Enter second number: "))   
+        #More error handling, specifically for invalid input type.
         except ValueError:
             print("Invalid input. Please enter numeric values.")
             continue 
-
+        #Implementing operations.
         if choice == "1":
             result = add(a, b)
         elif choice == "2":
@@ -56,7 +60,8 @@ def calculator():
         elif choice == "5":
             result = exp(a, b)
         
+    #Display of result.
         print(f'Result: {result}')
 
 
-    
+   
