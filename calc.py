@@ -63,5 +63,6 @@ def calculator():
     #Display of result.
         print(f'Result: {result}')
 
-
-   
+# Run the calculator, but only if this file is being executed directly.
+if __name__ == "__main__":
+    calculator()
