@@ -45,5 +45,18 @@ def calculator():
             print("Invalid input. Please enter numeric values.")
             continue 
 
+        if choice == "1":
+            result = add(a, b)
+        elif choice == "2":
+            result = subtract(a, b)
+        elif choice == "3":
+            result = multiply(a, b)
+        elif choice == "4":
+            result = divide(a, b)
+        elif choice == "5":
+            result = exp(a, b)
+        
+        print(f'Result: {result}')
+
 
     
